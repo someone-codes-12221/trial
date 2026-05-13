@@ -1,0 +1,182 @@
+:root {
+  --bg: #070b14;
+  --bg-alt: #111b31;
+  --text: #eaf2ff;
+  --muted: #b4bfd7;
+  --accent: #7c7dff;
+  --accent-2: #22d3ee;
+  --glass: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.2);
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme="light"] {
+  --bg: #f2f7ff;
+  --bg-alt: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #4f46e5;
+  --accent-2: #0891b2;
+  --glass: rgba(255, 255, 255, 0.74);
+  --border: rgba(148, 163, 184, 0.45);
+  --shadow: 0 10px 35px rgba(15, 23, 42, 0.16);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 15%, #25335d 0%, transparent 38%),
+    radial-gradient(circle at 88% 18%, #264a6f 0%, transparent 30%),
+    linear-gradient(150deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: radial-gradient(#fff 0.4px, transparent 0.6px);
+  background-size: 4px 4px;
+}
+
+.site-header {
+  position: sticky;
+  top: 1rem;
+  margin: 1rem auto;
+  width: min(1050px, 92%);
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.logo {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border-radius: 0.7rem;
+  padding: 0.45rem 0.75rem;
+}
+
+nav { display: flex; gap: 0.95rem; }
+nav a { text-decoration: none; color: var(--muted); font-weight: 600; }
+nav a:hover { color: var(--text); }
+
+#theme-toggle {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--glass);
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.4rem 0.65rem;
+}
+
+main {
+  width: min(1050px, 92%);
+  margin: 1rem auto 2.5rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.panel { padding: 1.4rem; }
+
+.hero {
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.2rem;
+}
+
+.eyebrow { color: var(--accent-2); letter-spacing: 0.08em; font-weight: 700; }
+h1 { margin: 0.35rem 0 0.8rem; font-size: clamp(2rem, 5vw, 3.5rem); }
+h1 span {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.lead { color: var(--muted); max-width: 65ch; }
+
+.portrait-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 1rem;
+}
+.avatar {
+  height: 60px;
+  width: 60px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+}
+.portrait-card p, .portrait-card li { color: var(--muted); }
+
+.timeline, .facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 0.9rem;
+}
+.timeline article, .facts-grid article {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  padding: 0.9rem;
+}
+.timeline p, .facts-grid p { color: var(--muted); }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+.chips span {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1rem;
+}
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+}
+
+.contact p { color: var(--muted); }
+footer { text-align: center; color: var(--muted); padding: 0.7rem 0 2rem; }
+
+@media (max-width: 900px) {
+  .hero,
+  .timeline,
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  nav { display: none; }
+}
