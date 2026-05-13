@@ -3,110 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Alex Rivera</title>
+    <title>Alex Rivera | About Me</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="noise"></div>
-
     <header class="site-header glass">
       <div class="logo">AR</div>
       <nav>
-        <a href="#me">Me</a>
-        <a href="#story">Story</a>
-        <a href="#favorites">Favorites</a>
-        <a href="#fun-facts">Fun Facts</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
       <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
     </header>
 
     <main>
-      <section id="me" class="hero glass">
-        <div>
-          <p class="eyebrow">THIS IS ME</p>
-          <h1>Hey, I’m <span>Alex</span> 👋</h1>
+      <section class="hero" id="about">
+        <div class="hero-content">
+          <p class="eyebrow">Software Engineer • Creator • Mentor</p>
+          <h1>Hi, I'm <span>Alex Rivera</span> — I build thoughtful digital experiences.</h1>
           <p class="lead">
-            I’m a curious human who loves learning, building tiny daily habits, and finding beauty in simple things.
-            I enjoy good conversations, long walks, coffee experiments, and creating things that make people smile.
+            I specialize in full-stack product engineering, AI-assisted workflows, and
+            building systems that feel fast, useful, and human.
           </p>
-          <p class="lead">
-            This page isn’t about my resume — it’s about my personality, values, and the things that make me me.
-          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">See my work</a>
+            <a class="btn secondary" href="#contact">Let's connect</a>
+          </div>
         </div>
-        <aside class="portrait-card">
-          <div class="avatar">A</div>
-          <h2>Alex Rivera</h2>
-          <p>Based in Seattle • Forever curious</p>
+        <aside class="stats glass">
+          <h2>By the numbers</h2>
           <ul>
-            <li>🌱 Growth-minded</li>
-            <li>🎧 Music all day</li>
-            <li>📚 Lifelong learner</li>
+            <li><strong>8+</strong> years in engineering</li>
+            <li><strong>35</strong> shipped products</li>
+            <li><strong>12M+</strong> user interactions supported</li>
           </ul>
         </aside>
       </section>
 
-      <section id="story" class="panel glass">
-        <h2>My Story</h2>
-        <div class="timeline">
+      <section id="skills" class="panel glass">
+        <h2>Core Skills</h2>
+        <div class="skill-grid">
           <article>
-            <h3>Childhood</h3>
-            <p>I was the kid who took things apart just to understand how they worked (and sometimes forgot how to put them back together).</p>
+            <h3>Frontend</h3>
+            <p>TypeScript, React, Next.js, accessible UI systems, motion design.</p>
           </article>
           <article>
-            <h3>Teen Years</h3>
-            <p>I discovered design, writing, and technology — and got hooked on turning ideas into real things.</p>
+            <h3>Backend</h3>
+            <p>Node.js, Python, REST/GraphQL APIs, caching, observability.</p>
           </article>
           <article>
-            <h3>Today</h3>
-            <p>I focus on living intentionally, learning continuously, and spending energy on people and projects that matter.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="favorites" class="panel glass">
-        <h2>Things I Love</h2>
-        <div class="chips">
-          <span>☕ Pour-over coffee</span>
-          <span>🌄 Sunrise hikes</span>
-          <span>📖 Non-fiction books</span>
-          <span>🎬 Sci-fi films</span>
-          <span>✍️ Journaling</span>
-          <span>🍜 Trying new food spots</span>
-          <span>🧩 Puzzles</span>
-          <span>🌧️ Rainy-day playlists</span>
-        </div>
-      </section>
-
-      <section id="fun-facts" class="panel glass">
-        <h2>Fun Facts</h2>
-        <div class="facts-grid">
-          <article>
-            <h3>01</h3>
-            <p>I can spend an hour perfecting a playlist title.</p>
+            <h3>AI + Automation</h3>
+            <p>Prompt architecture, retrieval systems, and production AI tooling.</p>
           </article>
           <article>
-            <h3>02</h3>
-            <p>I keep a notebook full of random ideas and weird observations.</p>
-          </article>
-          <article>
-            <h3>03</h3>
-            <p>My ideal weekend includes nature, friends, and absolutely no alarms.</p>
+            <h3>Leadership</h3>
+            <p>Roadmapping, cross-functional collaboration, and developer mentoring.</p>
           </article>
         </div>
       </section>
 
-      <section class="panel glass contact">
-        <h2>Let’s Say Hi</h2>
-        <p>If you like thoughtful chats, creative ideas, or swapping book recommendations, I’d love to connect.</p>
+      <section id="projects" class="panel">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+          <article class="card glass">
+            <h3>PulseBoard</h3>
+            <p>
+              Built a real-time analytics dashboard with streaming insights and custom
+              reporting. Reduced decision latency by 42%.
+            </p>
+          </article>
+          <article class="card glass">
+            <h3>CraftFlow AI</h3>
+            <p>
+              Designed an AI-powered writing assistant for marketing teams, improving
+              campaign output speed by 3x.
+            </p>
+          </article>
+          <article class="card glass">
+            <h3>MentorMesh</h3>
+            <p>
+              Created an internal mentoring platform that matched 500+ employees and
+              increased participation in learning programs.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="panel glass contact">
+        <h2>Get in touch</h2>
+        <p>I'm always open to collaboration, speaking, and ambitious product ideas.</p>
         <a class="btn primary" href="mailto:alex@example.com">alex@example.com</a>
       </section>
     </main>
 
     <footer>
-      <p>Made with heart • © <span id="year"></span> Alex</p>
+      <p>© <span id="year"></span> Alex Rivera. Built with care.</p>
     </footer>
 
     <script src="script.js"></script>
